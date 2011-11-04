@@ -1,3 +1,9 @@
+# revision 20080
+# category Package
+# catalog-ctan /macros/plain/contrib/present
+# catalog-date 2010-09-12 18:39:28 +0200
+# catalog-license lppl
+# catalog-version 1.0
 Name:		texlive-present
 Version:	1.0
 Release:	1
@@ -51,6 +57,7 @@ specific needs.
 %doc %{_texmfdistdir}/doc/plain/present/Sagnac.pdf
 %doc %{_texmfdistdir}/doc/plain/present/Stern.png
 %doc %{_texmfdistdir}/doc/plain/present/background.png
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -61,3 +68,5 @@ specific needs.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
