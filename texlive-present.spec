@@ -1,12 +1,12 @@
-# revision 20080
+# revision 25720
 # category Package
 # catalog-ctan /macros/plain/contrib/present
-# catalog-date 2010-09-12 18:39:28 +0200
+# catalog-date 2012-03-21 14:22:23 +0100
 # catalog-license lppl
-# catalog-version 1.0
+# catalog-version 2.1
 Name:		texlive-present
-Version:	1.0
-Release:	2
+Version:	2.1
+Release:	1
 Summary:	Presentations with Plain TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/plain/contrib/present
