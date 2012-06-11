@@ -1,11 +1,11 @@
-# revision 25720
+# revision 25953
 # category Package
 # catalog-ctan /macros/plain/contrib/present
-# catalog-date 2012-03-21 14:22:23 +0100
+# catalog-date 2012-04-12 21:32:25 +0200
 # catalog-license lppl
-# catalog-version 2.1
+# catalog-version 2.2
 Name:		texlive-present
-Version:	2.1
+Version:	2.2
 Release:	1
 Summary:	Presentations with Plain TeX
 Group:		Publishing
@@ -23,9 +23,10 @@ The package offers a collection of simple macros for preparing
 presentations in Plain TeX. Slide colour and text colour may be
 set, links between parts of the presentation, to other files,
 and to web addresses may be inserted. Images may be included
-easily. The structure of the macros is not overly complex, so
-that users should find it easy to adapt the macros to their
-specific needs.
+easily, and code is available to provide transition effects
+between slides or frames. The structure of the macros is not
+overly complex, so that users should find it easy to adapt the
+macros to their specific needs.
 
 %post
     %{_sbindir}/texlive.post
@@ -48,6 +49,7 @@ specific needs.
 %doc %{_texmfdistdir}/doc/plain/present/Sagnac.pdf
 %doc %{_texmfdistdir}/doc/plain/present/Stern.png
 %doc %{_texmfdistdir}/doc/plain/present/background.png
+%doc %{_texmfdistdir}/doc/plain/present/present-transitions.tex
 
 #-----------------------------------------------------------------------
 %prep
