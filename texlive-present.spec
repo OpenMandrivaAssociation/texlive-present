@@ -6,7 +6,7 @@
 # catalog-version 2.2
 Name:		texlive-present
 Version:	2.2
-Release:	2
+Release:	3
 Summary:	Presentations with Plain TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/plain/contrib/present
