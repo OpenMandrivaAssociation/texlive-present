@@ -1,18 +1,12 @@
-# revision 25953
-# category Package
-# catalog-ctan /macros/plain/contrib/present
-# catalog-date 2012-04-12 21:32:25 +0200
-# catalog-license lppl
-# catalog-version 2.2
 Name:		texlive-present
-Version:	2.2
-Release:	10
+Version:	50048
+Release:	1
 Summary:	Presentations with Plain TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/plain/contrib/present
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/present.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/present.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/present.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/present.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -29,56 +23,24 @@ overly complex, so that users should find it easy to adapt the
 macros to their specific needs.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/plain/present/present.tex
-%doc %{_texmfdistdir}/doc/plain/present/HowToTalkTeX.pdf
-%doc %{_texmfdistdir}/doc/plain/present/HowToTalkTeX.tex
-%doc %{_texmfdistdir}/doc/plain/present/Pfeil1.pdf
-%doc %{_texmfdistdir}/doc/plain/present/Pfeil2.pdf
-%doc %{_texmfdistdir}/doc/plain/present/Pfeil3.pdf
-%doc %{_texmfdistdir}/doc/plain/present/Pfeil4.pdf
-%doc %{_texmfdistdir}/doc/plain/present/README
-%doc %{_texmfdistdir}/doc/plain/present/Sagnac.pdf
-%doc %{_texmfdistdir}/doc/plain/present/Stern.png
-%doc %{_texmfdistdir}/doc/plain/present/background.png
-%doc %{_texmfdistdir}/doc/plain/present/present-transitions.tex
+%{_texmfdistdir}/tex/plain/present
+%doc %{_texmfdistdir}/doc/plain/present
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Mon Jun 11 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.2-1
-+ Revision: 805039
-- Update to latest release.
-
-* Tue Mar 27 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.1-1
-+ Revision: 787731
-- Update to latest release.
-
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0-2
-+ Revision: 755062
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0-1
-+ Revision: 719296
-- texlive-present
-- texlive-present
-- texlive-present
-- texlive-present
-
