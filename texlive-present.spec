@@ -3,7 +3,7 @@ Version:	50048
 Release:	2
 Summary:	Presentations with Plain TeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/plain/contrib/present
+URL:		https://www.ctan.org/tex-archive/macros/plain/contrib/present
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/present.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/present.doc.r%{version}.tar.xz
